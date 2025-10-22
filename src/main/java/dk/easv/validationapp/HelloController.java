@@ -15,10 +15,10 @@ public class HelloController {
     private Label resultLabel;
     
     // Business Logic Layer
-    private final UserValidationService validationService;
+    private final DataProcessorResponsible dataProcessorResponsibleService;
     
     public HelloController() {
-        this.validationService = new UserValidationService();
+        this.dataProcessorResponsibleService = new DataProcessorResponsible();
     }
     
     @FXML
@@ -28,8 +28,8 @@ public class HelloController {
         String age = ageField.getText();
         
         // Send data to Business Logic Layer for processing
-        UserValidationService.ValidationResult result = 
-            validationService.validateAndProcessUser(name, age);
+        DataProcessorResponsible.ValidationResult result =
+            dataProcessorResponsibleService.validateAndProcessUser(name, age);
         
         // Display result
         resultLabel.setText(result.getMessage());
