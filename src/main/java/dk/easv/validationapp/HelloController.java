@@ -23,7 +23,7 @@ public class HelloController {
     
     @FXML
     protected void onSubmitButtonClick() {
-        // Get input from text fields
+        // Get input from text field
         String name = nameField.getText();
         String age = ageField.getText();
         
@@ -43,5 +43,16 @@ public class HelloController {
         } else {
             resultLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: red;");
         }
+    }
+    
+    @FXML
+    protected void onClearButtonClick() {
+        // Clear all input fields
+        nameField.clear();
+        ageField.clear();
+        
+        // Reset result label to default state
+        resultLabel.setText("");
+        resultLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: blue;");
     }
 }

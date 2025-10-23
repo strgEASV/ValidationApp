@@ -26,7 +26,10 @@
         <TextField fx:id="ageField" promptText="Enter your age" prefWidth="250"/>
     </HBox>
     
-    <Button text="Submit" onAction="#onSubmitButtonClick" prefWidth="150" style="-fx-font-size: 14px;"/>
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Submit" onAction="#onSubmitButtonClick" prefWidth="150" style="-fx-font-size: 14px;"/>
+        <Button text="Clear" onAction="#onClearButtonClick" prefWidth="150" style="-fx-font-size: 14px;"/>
+    </HBox>
     
     <Label fx:id="resultLabel" wrapText="true" style="-fx-font-size: 14px; -fx-text-fill: blue;"/>
 </VBox>
